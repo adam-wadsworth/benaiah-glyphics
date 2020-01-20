@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button @click="googleLogin">Sign in with <span>Google</span></button>
+    <button @click="facebookLogin">Sign in with <span>Facebook</span></button>
+    <button @click="twitterLogin">Sign in with <span>Twitter</span></button>
   </div>
 </template>
 
@@ -14,9 +15,21 @@ export default {
     }
   },
   methods: {
-    googleLogin () {
-      const provider = new firebase.auth.GoogleAuthProvider()
+    facebookLogin () {
+      const provider = new firebase.auth.FacebookAuthProvider()
       firebase.auth().signInWithPopup(provider).then((result) => {
+        console.log(result)
+        this.$router.replace({
+          name: 'home'
+        })
+      }).catch((err) => {
+        this.error = err.message
+      })
+    },
+    twitterLogin () {
+      const provider = new firebase.auth.TwitterAuthProvider()
+      firebase.auth().signInWithPopup(provider).then((result) => {
+        console.log(result)
         this.$router.replace({
           name: 'home'
         })
