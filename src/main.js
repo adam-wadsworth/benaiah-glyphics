@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import * as firebase from 'firebase'
 import './assets/tailwind.css'
+import './assets/scss/app.scss'
 
 Vue.config.productionTip = false
 
