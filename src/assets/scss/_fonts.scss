@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+
 @font-face {
-  font-family: 'fontello';
+  font-family: 'benaiah_matheson';
+  src: url("../fonts/benaiah-type-font.eot");
+  src: url("../fonts/benaiah-type-font.eot?#iefix") format('embedded-opentype'), url("../fonts/benaiah-type-font.woff2") format('woff2'), url("../fonts/benaiah-type-font.woff") format('woff'), url("../fonts/benaiah-type-font.ttf") format('truetype'), url("../fonts/benaiah-type-font.svg#benaiah_matheson_character_Rg") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icons';
   src: url("../fonts/fontello.eot?83026379");
   src: url("../fonts/fontello.eot?83026379#iefix") format('embedded-opentype'), url("../fonts/fontello.woff2?83026379") format('woff2'), url("../fonts/fontello.woff?83026379") format('woff'), url("../fonts/fontello.ttf?83026379") format('truetype'), url("../fonts/fontello.svg?83026379#fontello") format('svg');
   font-weight: normal;
@@ -8,7 +18,7 @@
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-  font-family: "fontello";
+  font-family: "icons";
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -27,4 +37,17 @@
 
 .icon-logo:before {
   content: '\e800';
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'benaiah_matheson', sans-serif;
 }
