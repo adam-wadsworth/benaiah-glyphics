@@ -8,14 +8,33 @@ export default new Vuex.Store({
     user: {
       loggedIn: false,
       data: null
+    },
+    canvas: {
+      text: 'BENAIAH',
+      fontSize: '20px',
+      fontFamily: 'benaiah_matheson',
+      fontColour: '#000000',
+      textAlign: 'center',
+      textBaseline: 'top',
+      backgroundColour: '#FF0040',
+      canvasSize: '0, 0, 800, 500'
     }
   },
   getters: {
     user (state) {
       return state.user
+    },
+    canvas (state) {
+      return state.canvas
     }
   },
   mutations: {
+    updateColour: (state, canvas) => {
+      Object.assign(state.canvas, canvas)
+    },
+    updateText: (state, canvas) => {
+      Object.assign(state.canvas, canvas)
+    },
     SET_LOGGED_IN (state, value) {
       state.user.loggedIn = value
     },

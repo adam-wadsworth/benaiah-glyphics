@@ -1,5 +1,5 @@
 <template>
-  <div class="main">
+  <div class="main" v-bind:style="{ backgroundColor: this.$store.getters.canvas.backgroundColour }">
     <main>
       <Canvas />
       <Colours />
